@@ -3,10 +3,15 @@
 if [[ $1 == /* ]];
 then
     echo 1
-    FILE_PATH=".$1"
+    #FILE_PATH=".$1"
+    FILE_PATH=$(basename "$1")
+    echo "dirname $dir"
+    WORKDIR=$(dirname "$1")
 else
     echo 2
-    FILE_PATH=".$(pwd)/$1"
+    FILE_PATH="$1"
+    WORKDIR=$(pwd)
 fi
-echo $FILE_PATH
-docker run -it --rm -v /:/src --workdir /src fedeg/python-vim:latest vim $FILE_PATH
+echo Opening fie $FILE_PATH
+echo workdir $WORKDIR
+docker run -it --rm  -e TOMMY="test" -v $WORKDIR:/src --workdir /src/ fedeg/python-vim:latest /usr/bin/vim  $FILE_PATH
