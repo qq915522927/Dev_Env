@@ -1,0 +1,12 @@
+#! /bin/zsh
+
+if [[ $1 == /* ]];
+then
+    echo 1
+    FILE_PATH=".$1"
+else
+    echo 2
+    FILE_PATH=".$(pwd)/$1"
+fi
+echo $FILE_PATH
+docker run -it --rm -v /:/src --workdir /src fedeg/python-vim:latest vim $FILE_PATH
