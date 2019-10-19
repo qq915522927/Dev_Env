@@ -1,27 +1,29 @@
 <keymap version="1" name="Default for GNOME copy" parent="Default for GNOME">
+  <action id="$Undo">
+    <keyboard-shortcut first-keystroke="alt back_space" />
+  </action>
   <action id="FindInPath">
     <keyboard-shortcut first-keystroke="shift ctrl f" />
-    <keyboard-shortcut first-keystroke="comma" second-keystroke="f" />
+    <keyboard-shortcut first-keystroke="alt f" />
   </action>
   <action id="GotoClass" />
   <action id="GotoDeclaration">
-    <keyboard-shortcut first-keystroke="ctrl b" />
     <mouse-shortcut keystroke="control button1" />
-    <keyboard-shortcut first-keystroke="comma" second-keystroke="d" />
+    <keyboard-shortcut first-keystroke="alt d" />
   </action>
   <action id="GotoFile">
     <keyboard-shortcut first-keystroke="shift ctrl n" />
-    <keyboard-shortcut first-keystroke="comma" second-keystroke="r" />
+    <keyboard-shortcut first-keystroke="alt r" />
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="alt right" />
-    <keyboard-shortcut first-keystroke="t" second-keystroke="n" />
+    <keyboard-shortcut first-keystroke="ctrl z" second-keystroke="n" />
   </action>
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="alt left" />
-    <keyboard-shortcut first-keystroke="t" second-keystroke="p" />
+    <keyboard-shortcut first-keystroke="ctrl z" second-keystroke="p" />
   </action>
   <action id="RecentFiles">
-    <keyboard-shortcut first-keystroke="comma" second-keystroke="e" />
+    <keyboard-shortcut first-keystroke="alt e" />
   </action>
 </keymap>
